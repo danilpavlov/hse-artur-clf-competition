@@ -1,0 +1,33 @@
+[project]
+name = "hse-zalupa"
+version = "0.1.0"
+description = "TODO"
+authors = ["Your name <your.email@example.com>"]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "loguru == 0.7.3",
+    "httpx == 0.28.1",
+    "python-multipart == 0.0.20",
+    "langgraph==1.0.5",
+    "langchain-openai>=1.1.6",
+    "pydantic-settings>=2.12.0",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = [
+    "pytest == 8.3.4",
+    "pytest-asyncio == 0.25.3",
+    "pre-commit == 4.1.0",
+    "mypy == 1.15.0",
+    "sphinx>=9.0.4",
+    "locust>=2.42.6",
+]
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
